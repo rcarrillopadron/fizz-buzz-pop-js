@@ -1,14 +1,15 @@
 {
   "name": "fizz-buzz-pop-js",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Fizz Buzz Pop in JavaScript",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/index.specs.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rcarrillopadron/fizz-buzz-pop-js.git"
+    "url": "https://github.com/rcarrillopadron/fizz-buzz-pop-js.git"
   },
   "keywords": [
     "Fizz",
@@ -16,10 +17,15 @@
     "Pop",
     "JS"
   ],
-  "author": "Roberto Carrillo",
+  "author": "Roberto Carrillo <email@robertocarrillo.com> (http://www.robertocarrillo.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rcarrillopadron/fizz-buzz-pop-js/issues"
   },
-  "homepage": "https://github.com/rcarrillopadron/fizz-buzz-pop-js#readme"
+  "homepage": "https://github.com/rcarrillopadron/fizz-buzz-pop-js#readme",
+  "devDependencies": {
+    "chai": "3.3.0",
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
+  }
 }
