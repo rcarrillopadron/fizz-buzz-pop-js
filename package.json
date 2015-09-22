@@ -4,6 +4,7 @@
   "description": "Fizz Buzz Pop in JavaScript",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha tests/index.specs.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -25,7 +26,12 @@
   "homepage": "https://github.com/rcarrillopadron/fizz-buzz-pop-js#readme",
   "devDependencies": {
     "chai": "3.3.0",
+    "commitizen": "1.0.4",
+    "cz-conventional-changelog": "1.1.0",
     "mocha": "2.3.3",
     "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }

@@ -10,4 +10,5 @@ git tag 1.4.0-beta.0
 git push --tags
 npm publish --tag beta
 npm install -g semantic-release-cli
+npm install -D commitizen cz-conventional-changelog
 ~~~
