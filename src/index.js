@@ -1,7 +1,7 @@
 var generateValues = function () {
     var MIN_VALUE = 1,
         MAX_VALUE = 100,
-        results = [],
+        values = [],
         isDivisibleBy2,
         isDivisibleBy3,
         isDivisibleBy5,
@@ -12,17 +12,17 @@ var generateValues = function () {
         isDivisibleBy2 = number % 2 == 0;
         isDivisibleBy3 = number % 3 == 0;
 
-        if (isDivisibleBy2 && isDivisibleBy5 && isDivisibleBy3) results.push("FizzBuzzPop");
-        else if (isDivisibleBy2 && isDivisibleBy5) results.push("BuzzPop");
-        else if (isDivisibleBy2 && isDivisibleBy3) results.push("FizzPop");
-        else if (isDivisibleBy3 && isDivisibleBy5) results.push("FizzBuzz");
-        else if (isDivisibleBy3) results.push("Fizz");
-        else if (isDivisibleBy5) results.push("Buzz");
-        else if (isDivisibleBy2) results.push("Pop");
-        else results.push(number.toString());
+        if (isDivisibleBy2 && isDivisibleBy5 && isDivisibleBy3) values.push("FizzBuzzPop");
+        else if (isDivisibleBy2 && isDivisibleBy5) values.push("BuzzPop");
+        else if (isDivisibleBy2 && isDivisibleBy3) values.push("FizzPop");
+        else if (isDivisibleBy3 && isDivisibleBy5) values.push("FizzBuzz");
+        else if (isDivisibleBy3) values.push("Fizz");
+        else if (isDivisibleBy5) values.push("Buzz");
+        else if (isDivisibleBy2) values.push("Pop");
+        else values.push(number.toString());
     }
 
-    return results;
+    return values;
 };
 
 module.exports = {
