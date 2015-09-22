@@ -1,0 +1,25 @@
+{
+  "name": "fizz-buzz-pop-js",
+  "version": "1.0.0",
+  "description": "Fizz Buzz Pop in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcarrillopadron/fizz-buzz-pop-js.git"
+  },
+  "keywords": [
+    "Fizz",
+    "Buzz",
+    "Pop",
+    "JS"
+  ],
+  "author": "Roberto Carrillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rcarrillopadron/fizz-buzz-pop-js/issues"
+  },
+  "homepage": "https://github.com/rcarrillopadron/fizz-buzz-pop-js#readme"
+}
