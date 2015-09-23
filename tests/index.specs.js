@@ -1,5 +1,6 @@
-var expect = require('chai').expect;
-var calculator = require('../src/index')
+import FizzBuzzPopCalculator from '../src/index.js';
+import { expect } from 'chai';
+var calculator = new FizzBuzzPopCalculator();
 var results = calculator.generateValues();
 
 describe('fizz-buzz-pop-js', function () {
