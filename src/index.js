@@ -1,45 +1,54 @@
+import IsMultipleOfTwoThreeAndFive from './IsMultipleOfTwoThreeAndFive';
+import IsMultipleOfTwoAndFive from './IsMultipleOfTwoAndFive';
+import IsMultipleOfTwoAndThree from './IsMultipleOfTwoAndThree';
+import IsMultipleOfThreeAndFive from './IsMultipleOfThreeAndFive';
+import IsMultipleOfThree from './IsMultipleOfThree';
+import IsMultipleOfFive from './IsMultipleOfFive';
+import IsMultipleOfTwo from './IsMultipleOfTwo';
+import IsNotMultiple from './IsNotMultiple';
+
 class FizzBuzzPopCalculator {
-    generateValues(){
-        var MIN_VALUE = 1,
-            MAX_VALUE = 100,
-            values = [],
-            isDivisibleBy2,
-            isDivisibleBy3,
-            isDivisibleBy5,
-            number;
+    constructor(){
+        this.commands = [
+            new IsMultipleOfTwoThreeAndFive(),
+            new IsMultipleOfTwoAndFive(),
+            new IsMultipleOfTwoAndThree(),
+            new IsMultipleOfThreeAndFive(),
+            new IsMultipleOfThree(),
+            new IsMultipleOfFive(),
+            new IsMultipleOfTwo(),
+            new IsNotMultiple()
+        ];
+    }
 
-        for (number = MIN_VALUE; number <= MAX_VALUE; number++) {
-            isDivisibleBy5 = number % 5 === 0;
-            isDivisibleBy2 = number % 2 === 0;
-            isDivisibleBy3 = number % 3 === 0;
+    generateValues() {
+        const MIN_VALUE = 1;
+        const MAX_VALUE = 100;
 
-            if (isDivisibleBy2 && isDivisibleBy5 && isDivisibleBy3) {
-                values.push("FizzBuzzPop");
-            }
-            else if (isDivisibleBy2 && isDivisibleBy5) {
-                values.push("BuzzPop");
-            }
-            else if (isDivisibleBy2 && isDivisibleBy3) {
-                values.push("FizzPop");
-            }
-            else if (isDivisibleBy3 && isDivisibleBy5) {
-                values.push("FizzBuzz");
-            }
-            else if (isDivisibleBy3) {
-                values.push("Fizz");
-            }
-            else if (isDivisibleBy5) {
-                values.push("Buzz");
-            }
-            else if (isDivisibleBy2) {
-                values.push("Pop");
-            }
-            else {
-                values.push(number.toString());
-            }
+        let values = [];
+
+        for (let number = MIN_VALUE; number <= MAX_VALUE; number++) {
+            values.push(this.calculateValue(number));
         }
 
         return values;
+    }
+
+    calculateValue(number) {
+        let breakIteration = false,
+            message = number;
+        this.commands.forEach(command => {
+            if (command.match(number)) {
+                if (breakIteration) {
+                    return false;
+                } else {
+                    message = command.message;
+                    breakIteration = true;
+                }
+            }
+        });
+
+        return message;
     }
 }
 
