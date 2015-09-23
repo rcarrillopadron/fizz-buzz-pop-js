@@ -2,13 +2,21 @@
 
 Fizz Buzz Pop in JavaScript
 
-~~~
-npm publish
-npm info fizz-buzz-pop-js
-Create release tag in GitHub
-git tag 1.4.0-beta.0
-git push --tags
-npm publish --tag beta
-npm install -g semantic-release-cli
-npm install -D commitizen cz-conventional-changelog
-~~~
+The code in this repository is used to demonstrate how to create an open source end to end solution with NodeJS.
+This solution also provide auto publication of the library directly to the NpmJS registry.
+
+Technologies used:
+
+- Node
+- npm
+- Travis
+- Gulp
+- Babel
+- ES6
+- Mocha
+- Chai
+- JSHint
+- Commitizen
+- Git-Cz / cz-conventional-changelog
+
+> Roberto
